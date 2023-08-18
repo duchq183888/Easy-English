@@ -1,0 +1,62 @@
+# version: "2.0"
+
+# rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+- rule: topic 1
+  steps:
+  - intent: topic
+  - action: action_topic
+  
+- rule: how to learn 1
+  steps:
+  - intent: howtolearn
+  - action: utter_howtolearn
+
+- rule: meaning1
+  steps:
+  - intent: meaning
+  #   entities:
+  #      - vocab 
+  # - slot_was_set:
+  #      - vocab
+  - action: action_mean
+
+- rule: example1
+  steps:
+  - intent: example
+  #   entities:
+  #      - vocab 
+  # - slot_was_set:
+  #      - vocab
+  - action: action_example
+
+- rule: synonym
+  steps:
+  - intent: synonym
+  #   entities:
+  #      - vocab 
+  # - slot_was_set:
+  #      - vocab
+  - action: action_synonym
+# # - rule: 
+# #   steps:
+# #   - intent: features_bot
+# #   - action: utter_features_bot
+- rule: fallback
+   steps:
+   - intent: nlu_fallback
+  #    entities:
+  #      - vocab 
+  #  - slot_was_set:
+  #      - vocab
+   - action: utter_unclear

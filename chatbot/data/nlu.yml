@@ -1,0 +1,362 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - tư vấn
+    - hỗ trợ
+    - giúp mình với
+    - chào
+    - xin chào
+    - có ai không
+    - anh ơi
+    - chị ơi
+    - chào anh
+    - chào chị
+    - bạn ơi
+    - bạn bot ơi
+    
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - chào bạn
+    - tạm biệt
+    - chào tạm biệt
+    - tạm biệt nhé
+    - tạm biệt nha
+    - tạm biệt anh
+    - tạm biệt chị
+    - tạm biệt bạn
+    - xong rồi
+    - done
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng rồi nè
+    - đúng rồi
+    - dĩ nhiên rồi
+
+- intent: thanks
+  examples: |
+    - cam on
+    - thanks
+    - thanks u
+    - cảm ơn rất nhiều
+    - love u
+    - cảm ơn bạn
+    - tuyệt vời
+
+- intent: who
+  examples: |
+    - bạn là ai
+    - ai vậy ạ
+    - ai thế
+    - giới thiệu đi
+    - giới thiệu xem nào
+    - xưng danh đi
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: topic
+  examples: |
+    - Hôm nay chúng ta học gì nhỉ?
+    - nay học gì nhỉ
+    - nay học chủ đề gì nhỉ
+    - gợi ý cho tôi một vài từ vựng nào
+    - cho tôi một vài từ vựng học vào hôm nay
+    - cho tôi một chủ đề nào
+
+
+- intent: features_bot
+  examples: |
+    - Bạn ở đây làm gì?
+    - Bạn có chức năng gì?
+    - Bạn có thể giúp gì?
+    - Bạn có thể làm được gì?
+
+- intent: howtolearn
+  examples: |
+    - Làm thế nào để học tốt từ vựng?
+    - Bạn ơi, làm thế nào để giỏi từ vựng nhỉ?
+
+- intent: meaning
+  examples: |
+    - Từ [cow](vocab) nghĩa là gì nhỉ
+    - [ring](vocab) là gì
+    - [during](vocab) là gì nhỉ
+    - nghĩa của [cold](vocab)
+    - từ [teeth](vocab) nghĩa là gì
+    - giải thích cho tôi nghĩa của từ [fast](vocab)
+    - mô tả ngắn gọn cho tôi nghĩa của [laptop](vocab)
+    - tra cho tao từ [own](vocab)
+
+- intent: example
+  examples: |
+    - Lấy ví dụ về từ [cow](vocab)
+    - ví dụ của từ [beautiful](vocab)
+    - cho tôi ví dụ của từ [remote](vocab)
+    
+- intent: synonym
+  examples: |
+    - Từ đồng nghĩa của [favorite](vocab) là gì?
+    - đồng nghĩa của [soccer](vocab)
+    - Tìm từ đồng nghĩa của [happy](vocab)
+    - dong nghia cua [rick](vocab)
+    - từ [chat](vocab) tương đương với từ nào
+
+- intent: customtopic
+  examples: |
+    - Tôi muốn học về chủ đề [cây cối](vi-vocab)
+    - Cho tôi 1 vài từ chủ đề [kinh tế](vi-vocab)
+    - chủ đề [màu sắc](vi-vocab) 
+    - tôi có thể học về chủ đề [môi trường](vi-vocab) không
+    - nhưng tôi muốn học về chủ đề [trường học](vi-vocab) cơ
+    - nay có thể học về chủ đề [lịch sử] không
+    - chủ đề [sinh học](vi-vocab) nhé
+
+- intent: pronounce
+  examples: |
+    - Từ [wind](vocab)  phát âm như thế nào nhỉ
+    - Làm sao để phát âm từ này [star](vocab) 
+    - Cách phát âm của từ [fast](vocab) 
+    - Bạn có thể chỉ tôi cách phát âm từ [sink](vocab) không
+    - Bạn có thể dạy tôi cách phát âm từ [know](vocab) không
+
+- lookup: vocab 
+  examples: |
+      - the
+      - be
+      - to
+      - of
+      - and
+      - a
+      - in
+      - that
+      - have
+      - I
+      - it
+      - for
+      - not
+      - on
+      - with
+      - he
+      - as
+      - you
+      - do
+      - at
+      - this
+      - but
+      - his
+      - by
+      - from
+      - they
+      - we
+      - say
+      - her
+      - she
+      - or
+      - an
+      - will
+      - my
+      - one
+      - all
+      - would
+      - there
+      - their
+      - what
+      - so
+      - up
+      - out
+      - if
+      - about
+      - who
+      - get
+      - which
+      - go
+      - me
+      - when
+      - make
+      - can
+      - like
+      - time
+      - no
+      - just
+      - him
+      - know
+      - take
+      - people
+      - into
+      - year
+      - your
+      - good
+      - some
+      - could
+      - them
+      - see
+      - other
+      - than
+      - then
+      - now
+      - look
+      - only
+      - come
+      - its
+      - over
+      - think
+      - also
+      - back
+      - after
+      - use
+      - two
+      - how
+      - our
+      - work
+      - first
+      - well
+      - way
+      - even
+      - new
+      - want
+      - because
+      - any
+      - these
+      - give
+      - day
+      - most
+      - us
+      - is
+      - are
+      - was
+      - were
+      - has
+      - had
+      - be
+      - been
+      - am
+      - do
+      - did
+      - does
+      - doing
+      - can
+      - could
+      - will
+      - would
+      - shall
+      - should
+      - may
+      - might
+      - must
+      - ought
+      - need
+      - dare
+      - used
+      - get
+      - got
+      - gotten
+      - getting
+      - make
+      - made
+      - making
+      - likes
+      - liking
+      - liked
+      - put
+      - puts
+      - putting
+      - say
+      - says
+      - saying
+      - see
+      - wind
+      - sees
+      - seeing
+      - saw
+      - mouse
+      - head
+      - ear
+      - brown
+      - go
+      - goes
+      - going
+      - went
+      - run
+      - bear
+      - tiger
+      - shirt
+      - promotion
+      - register
+      - function
+      - domain
+                  

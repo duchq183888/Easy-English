@@ -1,0 +1,144 @@
+version: "2.0"
+
+stories:
+
+ - story: happy path
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: mood_great
+   - action: utter_happy
+
+ - story: topic
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: topic
+   - action: action_topic
+   - intent: mood_great
+   - action: utter_happy
+
+ - story: how to learn
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: howtolearn
+   - action: utter_howtolearn
+
+ - story: meaning 1
+   steps:
+   - intent: meaning
+   - action: action_mean
+
+ - story: example 1
+   steps:
+   - intent: example
+   - action: action_example
+  
+ - story: synonym 1
+   steps:
+   - intent: synonym
+   - action: action_synonym
+
+ - story: fallback 1
+   steps:
+   - intent: nlu_fallback
+   - action: utter_unclear
+ 
+ - story: customtopic 1
+   steps:
+   - intent: customtopic
+   - action: action_custom_topic
+
+ - story: features 1
+   steps:
+   - intent: features_bot
+   - action: utter_features_bot
+ 
+ - story: pronounce 1
+   steps:
+   - intent: pronounce
+   - action: action_pronounce
+
+ - story: who 1
+   steps:
+   - intent: who
+   - action: utter_who
+
+ - story: gb 1
+   steps:
+   - intent: goodbye
+   - action: utter_goodbye
+  
+ - story: thanks 1
+   steps:
+   - intent: thanks
+   - action: utter_thanks
+ 
+ - story: line 1
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: who
+   - action: utter_who
+   - intent: features_bot
+   - action: utter_features_bot
+   - intent: howtolearn
+   - action: utter_howtolearn
+   - intent: topic
+   - action: action_topic
+   - intent: customtopic
+   - action: action_custom_topic
+   - intent: meaning
+   - action: action_mean
+   - intent: synonym
+   - action: action_synonym
+   - intent: pronounce
+   - action: action_pronounce
+   - intent: example
+   - action: action_example
+   - intent: thanks
+   - action: utter_thanks
+   - intent: goodbye
+   - action: utter_goodbye
+   
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: topic
+#   - action: action_topic
+#   - intent: topic
+#   - action: action_topic
+#   - action: meaning
+#   - intent: meaning
+#   - action: action_mean
+#   - intent: meaning
+#   - action: action_mean
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: meaning
+#     entities:
+#     - vocab: fan
+#   - slot_was_set:
+#     - vocab: fan
+#   - action: action_mean
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: meaning
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: meaning
+#     entities:
+#     - vocab: cook
+#   - slot_was_set:
+#     - vocab: cook
+#   - action: action_mean
+#   - intent: meaning
+#     entities:
+#     - vocab: teeth
+#   - slot_was_set:
+#     - vocab: teeth
+#   - action: action_mean

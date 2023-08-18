@@ -1,0 +1,70 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+entities:
+- vocab
+- vi-vocab
+intents:
+- affirm
+- greet
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- features_bot
+- topic
+- howtolearn
+- example
+- synonym
+- meaning 
+- customtopic
+- pronounce
+- who
+- thanks
+
+slots:
+  vocab:
+    type: text
+    influence_conversation: true
+  vi-vocab:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Chào đằng ấy
+  - text: Xin chào, tôi là Peter, tôi ở đây để giúp bạn học từ vựng tốt hơn ^.^
+  utter_who:
+  - text: Tớ là Peter, Tớ ở đây để giúp bạn học từ vựng tốt hơn ^.^
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Tạm biệt bạn nha, chúc bạn có một ngày tốt lành ^.^
+  utter_thanks:
+  - text: Không có gì ạ, bạn thấy hài lòng là tớ vui rồi ạ ^.^
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_howtolearn:
+  - text: |-
+      Đây là một số gợi ý để bạn học tốt từ vựng tiếng Anh:
+      1. Đặt mục tiêu: Xác định những từ vựng bạn muốn học và đặt ra mục tiêu cụ thể. Ví dụ: học 5 từ mới mỗi ngày.
+      2. Đọc sách, báo, tạp chí tiếng Anh, xem phim, nghe nhạc, podcast, ...
+      3. Ghi chú và ôn lại: Viết ra các từ vựng mới, cùng với nghĩa và ví dụ trong một sổ ghi chú. Điều này giúp bạn ghi nhớ và ôn lại từ vựng một cách hiệu quả. Hãy xem lại các từ vựng mỗi ngày để củng cố kiến thức.
+      Và đừng quên tham gia các bài học từ vựng trên Easy English nha. Chúc bạn học tập tốt >_<.
+  utter_unclear:
+  - text: Xin lỗi tôi chưa hiểu ý của bạn, bạn có thể mô tả rõ hơn không ạ :((
+  utter_features_bot:
+  - text: Tớ có thể làm nhiều việc lắm ạ. Chẳng hạn như giúp bạn tra từ điển, học từ vựng theo chủ đề, học phát âm, tìm ví dụ, tìm từ đồng nghĩa, vân vân và mây mây :)))))
+
+actions:
+- action_example
+- action_mean
+- action_synonym
+- action_topic
+- action_custom_topic
+- action_pronounce
+
