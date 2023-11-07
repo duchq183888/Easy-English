@@ -1,4 +1,4 @@
-package com.globits.patient.app.dto;
+
 
 import lombok.Getter;
 import lombok.Setter;
